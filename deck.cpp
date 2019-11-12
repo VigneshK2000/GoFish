@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <stdlib.h>
 
 
 using namespace std;
@@ -24,7 +25,7 @@ Deck::Deck() {
 
 void Deck::shuffle() {
 
-    for(int i = 0; i <20 ; i++) {
+    for(int i = 0; i <50 ; i++) {
         int r = rand() % 52;
         int s = rand() % 52;
         Card temp;
@@ -36,11 +37,13 @@ void Deck::shuffle() {
 }
 
 Card Deck::dealCard() {
-    Card temp = myCards[0];
-    myIndex += 1;
-    return temp;
+    if (myIndex < SIZE) {
+        Card temp = myCards[myIndex];
+        myIndex += 1;
+        return temp;
+    }
 }
 
 int Deck::size() const {
-    return 52 - myIndex;
+    return SIZE - myIndex;
 }

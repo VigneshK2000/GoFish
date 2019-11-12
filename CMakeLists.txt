@@ -3,7 +3,7 @@ project(GoFish)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(GoFish GoFish.cpp
+add_executable(GoFish go_fish.cpp
                         card.h
                         deck.h
                         player.h

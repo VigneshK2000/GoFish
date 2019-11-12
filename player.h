@@ -81,7 +81,8 @@ private:
     vector <Card> myHand;
     vector <Card> myBook;
 
-    string myName;
+
+    string myName ;
 
 };
 
